@@ -1,2 +1,4 @@
+__pycache__/
+.vscode/
 apikey.py
-__pycache__/apikey.cpython-39.pyc
+dallekey.txt
