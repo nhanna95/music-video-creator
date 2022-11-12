@@ -1,7 +1,9 @@
 import requests
-from apikey import lyrics_search_key
+from apikey import lyrics_search_key, shrey_key
+import os
+import openai
 
-song_name = "thunderstruck"
+song_name = "senorita"
 
 url = "https://lyrics-search.p.rapidapi.com/search/lyrics"
 
@@ -15,7 +17,9 @@ headers = {
 response = requests.request("POST", url, json=payload, headers=headers)
 
 lyrics=response.text
-l = lyrics.split(',')
-l = l[4:]
-
-print(l)
+lyrics = lyrics.split(",")
+lyrics = lyrics[4:]
+lyrics = " ".join(lyrics)
+lyrics = lyrics.split('\\n\\n')
+for verse in lyrics:
+  print(verse + "\n")
