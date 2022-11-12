@@ -1,3 +1,3 @@
-from apikey import key
+from apikey import dalle_key
 
-print(key)
+print(dalle_key)
