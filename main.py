@@ -1,8 +1,11 @@
-from apikey import key
+from lyricsapi import get_prompts
+from tqdm import tqdm
 from PIL import Image
 import urllib.request
 import webbrowser
+import random
 import openai
+import time
 import os
 
 openai.organization = 'org-sL2pDmmtVNXIyoV89PpnC6xT'
@@ -200,10 +203,26 @@ small_and_free = [
     'expressive'
 ]
 
-response = openai.Image.create(
-    prompt="an oil painting of a group of human-like androids sitting at a cocktail bar",
-    size="256x256"
-)
-image_url = response['data'][0]['url']
+song = input('what song would you like: ')
 
-webbrowser.open(image_url)
+prompts = get_prompts(song)
+
+print('got lyrics')
+
+image_urls = []
+
+for prompt in tqdm(prompts):
+    try:
+        response = openai.Image.create(
+            prompt=medias[random.randint(0, len(medias)-1)] + prompt,
+            size="256x256"
+        )
+        image_urls.append(response['data'][0]['url'])
+    except:
+        pass
+    time.sleep(15)
+
+
+for url in image_urls:
+    webbrowser.open(url)
+    time.sleep(5)
