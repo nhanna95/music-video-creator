@@ -30,12 +30,6 @@ lyrics = response.json()["lyrics"]
 
 verses = lyrics.split('\n\n')
 
-for verse in verses:
-    print(verse + '\n\n\n')
-
-exit()
-
-
 prompts = []
 
 for verse in verses:
@@ -46,14 +40,21 @@ for verse in verses:
             bar_sets.append(verse[ind:i+1])
             ind = i+1
 
+    bar_sets.append(verse[ind:])
+
     prompts.append(bar_sets)
 
 final_prompts = []
+
+print(prompts[0])
 
 for verse in prompts:
     for i in range(int(len(verse)/2)):
         prompt = ' '.join(verse[2 * i:(2 * i) + 2])
         final_prompts.append(prompt)
+
+    if len(verse) % 2 == 1:
+        final_prompts.append(verse[-1])
 
 for prompt in final_prompts:
     print(prompt + '\n')
