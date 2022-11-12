@@ -1,8 +1,8 @@
-import requests
 from apikey import lyrics_search_key
-import os
+import requests
 import openai
 import json
+import os
 
 
 def isnt_space(char):
@@ -13,48 +13,41 @@ def is_upper(char):
     return char in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 
-song_name = "self care"
-
 url = "https://lyrics-search.p.rapidapi.com/search/lyrics"
 
-payload = {"searchTerm": song_name}
-headers = {
-    "content-type": "application/json",
-    "X-RapidAPI-Key": lyrics_search_key,
-    "X-RapidAPI-Host": "lyrics-search.p.rapidapi.com"
-}
 
-response = requests.request("POST", url, json=payload, headers=headers)
+def get_prompts(song_name):
+    payload = {"searchTerm": song_name}
+    headers = {
+        "content-type": "application/json",
+        "X-RapidAPI-Key": lyrics_search_key,
+        "X-RapidAPI-Host": "lyrics-search.p.rapidapi.com"
+    }
 
-lyrics = response.json()["lyrics"]
+    response = requests.request("POST", url, json=payload, headers=headers)
+    lyrics = response.json()["lyrics"]
+    verses = lyrics.split('\n\n')
+    prompts = []
 
-verses = lyrics.split('\n\n')
+    for verse in verses:
+        bar_sets = []
+        ind = 0
+        for i in range(len(verse) - 1):
+            if isnt_space(verse[i]) and is_upper(verse[i+1]):
+                bar_sets.append(verse[ind:i+1])
+                ind = i+1
 
-prompts = []
+        bar_sets.append(verse[ind:])
+        prompts.append(bar_sets)
 
-for verse in verses:
-    bar_sets = []
-    ind = 0
-    for i in range(len(verse) - 1):
-        if isnt_space(verse[i]) and is_upper(verse[i+1]):
-            bar_sets.append(verse[ind:i+1])
-            ind = i+1
+    final_prompts = []
 
-    bar_sets.append(verse[ind:])
+    for verse in prompts:
+        for i in range(int(len(verse)/2)):
+            prompt = ' '.join(verse[2 * i:(2 * i) + 2])
+            final_prompts.append(prompt)
 
-    prompts.append(bar_sets)
+        if len(verse) % 2 == 1:
+            final_prompts.append(verse[-1])
 
-final_prompts = []
-
-print(prompts[0])
-
-for verse in prompts:
-    for i in range(int(len(verse)/2)):
-        prompt = ' '.join(verse[2 * i:(2 * i) + 2])
-        final_prompts.append(prompt)
-
-    if len(verse) % 2 == 1:
-        final_prompts.append(verse[-1])
-
-for prompt in final_prompts:
-    print(prompt + '\n')
+    return final_prompts
