@@ -1,10 +1,12 @@
 from lyricsapi import get_prompts
+from yt import get_link
 from tqdm import tqdm
 from PIL import Image
 import urllib.request
 import webbrowser
 import random
 import openai
+import pytube
 import time
 import os
 
@@ -207,9 +209,25 @@ song = input('what song would you like: ')
 
 prompts = get_prompts(song)
 
+if not prompts:
+    print('couldnt find lyrics')
+    exit()
+
 print('got lyrics')
 
 image_urls = []
+
+try:
+    yt_link = get_link(song)
+    video = pytube.YouTube(yt_link)
+    length = video.length
+    spf = length / len(prompts)
+    print(spf)
+except:
+    spf = 5
+    print(spf)
+
+exit()
 
 for prompt in tqdm(prompts):
     try:
@@ -221,7 +239,6 @@ for prompt in tqdm(prompts):
     except:
         pass
     time.sleep(15)
-
 
 for url in image_urls:
     webbrowser.open(url)

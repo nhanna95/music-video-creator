@@ -25,7 +25,10 @@ def get_prompts(song_name):
     }
 
     response = requests.request("POST", url, json=payload, headers=headers)
-    lyrics = response.json()["lyrics"]
+    try:
+        lyrics = response.json()["lyrics"]
+    except:
+        return []
     verses = lyrics.split('\n\n')
     prompts = []
 
