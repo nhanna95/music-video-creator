@@ -1,0 +1,18 @@
+urls = ['https://oaidalleapiprodscus.blob.core.windows.net/private/org-sL2pDmmtVNXIyoV89PpnC6xT/user-wJTkJFjkCq2lpt0sShjYsfB6/img-zczzBbA748rN0cAh32902ZmR.png?st=2022-11-13T02%3A53%3A53Z&se=2022-11-13T04%3A53%3A53Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-11-12T22%3A20%3A38Z&ske=2022-11-13T22%3A20%3A38Z&sks=b&skv=2021-08-06&sig=seeOLMnwpxdLxrY9%2BVe1ezmMQICSay%2BZVXY6iquFWWY%3D',
+'https://oaidalleapiprodscus.blob.core.windows.net/private/org-sL2pDmmtVNXIyoV89PpnC6xT/user-wJTkJFjkCq2lpt0sShjYsfB6/img-UyTzlfzVq9gWoFhMNyJUGERL.png?st=2022-11-13T02%3A51%3A36Z&se=2022-11-13T04%3A51%3A36Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-11-12T10%3A34%3A03Z&ske=2022-11-13T10%3A34%3A03Z&sks=b&skv=2021-08-06&sig=9HA7%2Bs1POgCqiup58bZJOvncYzC66wEieCxLiQB87T0%3D',
+'https://oaidalleapiprodscus.blob.core.windows.net/private/org-sL2pDmmtVNXIyoV89PpnC6xT/user-wJTkJFjkCq2lpt0sShjYsfB6/img-PxU6bl34r0gJt2FLeuUqTvT4.png?st=2022-11-13T02%3A52%3A16Z&se=2022-11-13T04%3A52%3A16Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-11-13T01%3A37%3A23Z&ske=2022-11-14T01%3A37%3A23Z&sks=b&skv=2021-08-06&sig=rO5QPqK9Gn8%2BNn4pm2R1tp9AhfsRSQo2ZGUnBc%2BfunA%3D',
+'https://oaidalleapiprodscus.blob.core.windows.net/private/org-sL2pDmmtVNXIyoV89PpnC6xT/user-wJTkJFjkCq2lpt0sShjYsfB6/img-Ob1oFLC2n1rFFZiWsOKaihUN.png?st=2022-11-13T02%3A52%3A35Z&se=2022-11-13T04%3A52%3A35Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-11-13T00%3A59%3A48Z&ske=2022-11-14T00%3A59%3A48Z&sks=b&skv=2021-08-06&sig=fVKuHu5TCgvpYs3J6U0pMTWdRKQt0U7frO9VT7U1DE8%3D',
+'https://oaidalleapiprodscus.blob.core.windows.net/private/org-sL2pDmmtVNXIyoV89PpnC6xT/user-wJTkJFjkCq2lpt0sShjYsfB6/img-NWE3PRKOTTf4xpmIbzuq2Cku.png?st=2022-11-13T02%3A52%3A55Z&se=2022-11-13T04%3A52%3A55Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-11-12T23%3A29%3A56Z&ske=2022-11-13T23%3A29%3A56Z&sks=b&skv=2021-08-06&sig=W8oHEMxGbUBhKQIoMceKOPN1Y0OM0M9aVzy5hYJWZhE%3D',
+'https://oaidalleapiprodscus.blob.core.windows.net/private/org-sL2pDmmtVNXIyoV89PpnC6xT/user-wJTkJFjkCq2lpt0sShjYsfB6/img-OQKCjHfkd2Dn3przdHqECJ8v.png?st=2022-11-13T02%3A53%3A14Z&se=2022-11-13T04%3A53%3A14Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-11-12T23%3A08%3A54Z&ske=2022-11-13T23%3A08%3A54Z&sks=b&skv=2021-08-06&sig=80qwpCTLyb8bVajJB4zRqTSye39niK3%2BP0Ayzf/QheQ%3D',
+'https://oaidalleapiprodscus.blob.core.windows.net/private/org-sL2pDmmtVNXIyoV89PpnC6xT/user-wJTkJFjkCq2lpt0sShjYsfB6/img-zsncd85SdvCGJNsCuJTq7oyl.png?st=2022-11-13T02%3A53%3A34Z&se=2022-11-13T04%3A53%3A34Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-11-13T03%3A13%3A14Z&ske=2022-11-14T03%3A13%3A14Z&sks=b&skv=2021-08-06&sig=FQydhXYRPJcK2tw6%2B%2BRpj2oEDTLdRVM2rNy%2B%2BfT67jQ%3D']
+
+import urllib.request
+from PIL import Image
+import os
+
+os.mkdir('/Users/shreyagarwal/Code/GitHub/music-video-creator/folder')
+
+for url in urls:
+    urllib.request.urlretrieve(url,"folder/thing"+str(urls.index(url)+1)+".png")
+    img = Image.open("folder/thing"+str(urls.index(url)+1)+".png")
+    img.show()
